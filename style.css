@@ -77,9 +77,10 @@ footer {
 }
 
 .gallery-track {
+  will-change: transform;
   display: flex;
   gap: 24px;
-  animation: scroll 20s linear infinite;
+  animation: scroll 60s linear infinite;
 }
 
 .gallery-track img {
@@ -108,7 +109,7 @@ footer {
   display: flex;
   gap: 24px;
   width: max-content;
-  animation: scroll 20s linear infinite;
+  animation: scroll 60s linear infinite;
 }
 
 .gallery-track img {
@@ -140,7 +141,7 @@ footer {
   display: flex;
   gap: 20px;
   width: max-content;
-  animation: scroll 30s linear infinite;
+  animation: scroll 60s linear infinite;
 }
 
 /* ACA forzamos tamaño chico, pase lo que pase */
