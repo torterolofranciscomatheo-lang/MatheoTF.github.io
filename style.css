@@ -140,8 +140,8 @@ header {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 columnas */
   gap: 20px; /* espacio entre imágenes */
-  max-width: 520px; /* ancho total del rectángulo */
-  margin: 0 auto 60px auto; /* centrado y margen abajo */
+  max-width: 900px; /* ancho total del rectángulo */
+  margin: 0 auto 60px auto; /* centrado horizontal y margen abajo */
 }
 
 .project-small img {
@@ -153,10 +153,9 @@ header {
 .project-small p {
   font-size: 14px;
   text-align: center;
-  margin-bottom: 6px;
+  margin-bottom: 8px; /* separa subtítulo de la imagen */
   opacity: 0.7;
 }
-
 
 /* ==============================
    FOOTER
