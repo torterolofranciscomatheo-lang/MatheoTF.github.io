@@ -52,10 +52,23 @@ footer {
 }
 
 .project img {
-  width: 60%;
+  width: 100%;
+  max-width: 800px;
   border-radius: 6px;
 }
 
+
 .info {
-  width: 40%;
+  max-width: 350px;
 }
+
+@media (max-width: 900px) {
+  .project {
+    flex-direction: column;
+  }
+
+  .info {
+    max-width: 100%;
+  }
+}
+
