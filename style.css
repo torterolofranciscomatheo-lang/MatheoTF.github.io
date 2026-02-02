@@ -1,3 +1,7 @@
+/* ==============================
+   RESET / BASE
+   ============================== */
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -5,34 +9,70 @@ body {
   color: #eee;
 }
 
+
+/* ==============================
+   HEADER
+   ============================== */
+
 header {
   text-align: center;
   padding: 40px 20px;
 }
 
+
+/* ==============================
+   GALERÍA SUPERIOR – LOOP INFINITO
+   ============================== */
+
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 16px;
-  padding: 20px;
-}
-
-.gallery img {
   width: 100%;
+  overflow: hidden;
+  margin: 32px 0;
+}
+
+/* Contenedor animado */
+.gallery-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: scroll 70s linear infinite;
+}
+
+/* Cada bloque duplicado */
+.gallery-set {
+  display: flex;
+  gap: 24px;
+}
+
+/* Imágenes del loop */
+.gallery-set img {
+  width: 320px;
+  height: 200px;
+  object-fit: cover;
+  flex-shrink: 0;
   border-radius: 6px;
-  transition: transform 0.3s;
 }
 
-.gallery img:hover {
-  transform: scale(1.03);
+/* Animación horizontal */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
-footer {
-  text-align: center;
-  padding: 20px;
-  font-size: 14px;
-  opacity: 0.6;
+/* Pausa al hover (opcional, queda lindo) */
+.gallery:hover .gallery-track {
+  animation-play-state: paused;
 }
+
+
+/* ==============================
+   PORTFOLIO / PROYECTOS
+   ============================== */
+
 .portfolio-section {
   padding: 60px 20px;
   max-width: 1100px;
@@ -57,10 +97,26 @@ footer {
   border-radius: 6px;
 }
 
-
 .info {
   max-width: 350px;
 }
+
+
+/* ==============================
+   FOOTER
+   ============================== */
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+
+/* ==============================
+   RESPONSIVE
+   ============================== */
 
 @media (max-width: 900px) {
   .project {
@@ -69,97 +125,6 @@ footer {
 
   .info {
     max-width: 100%;
-  }
-}
-.gallery {
-  overflow: hidden;
-  width: 100%;
-}
-
-.gallery-track {
-  will-change: transform;
-  display: flex;
-  gap: 24px;
-  animation: scroll 60s linear infinite;
-}
-
-.gallery-track img {
-  width: 300px;
-  flex-shrink: 0;
-}
-
-/* Animación */
-@keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-/* ===== GALERÍA SUPERIOR LOOP ===== */
-
-.gallery {
-  width: 100%;
-  overflow: hidden;
-  margin: 40px 0;
-}
-
-.gallery-track {
-  display: flex;
-  gap: 24px;
-  width: max-content;
-  animation: scroll 60s linear infinite;
-}
-
-.gallery-track img {
-  height: 220px;        /* controla el tamaño */
-  width: auto;
-  object-fit: cover;
-  flex-shrink: 0;
-  border-radius: 6px;
-}
-
-/* animación horizontal */
-@keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-/* ===== FIX DEFINITIVO GALERÍA SUPERIOR ===== */
-
-.gallery {
-  width: 100%;
-  overflow: hidden;
-  margin: 24px 0;
-}
-
-.gallery-track {
-  display: flex;
-  gap: 20px;
-  width: max-content;
-  animation: scroll 60s linear infinite;
-}
-
-/* ACA forzamos tamaño chico, pase lo que pase */
-.gallery-track img {
-  width: 260px !important;
-  height: 160px !important;
-  object-fit: cover;
-  flex-shrink: 0;
-  border-radius: 6px;
-}
-
-/* Animación */
-@keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
   }
 }
 
