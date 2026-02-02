@@ -41,27 +41,31 @@ header {
 .gallery-track {
   display: flex;
   gap: 24px;
-  width: max-content;
   align-items: center;
   will-change: transform;
   animation: scroll 70s linear infinite;
-  padding: 20px 0;       /* espacio para hover vertical */
+
+  /* nuevo: limitar ancho total para que no crezca demasiado */
+  max-width: 100%;
 }
 
-/* Cada bloque duplicado */
 .gallery-set {
   display: flex;
-  gap: 24px;             /* espacio entre imágenes dentro de cada set */
+  gap: 24px;
+
+  /* nuevo: limitar ancho total del set */
+  flex: 0 0 auto;
 }
+
 
 /* Imágenes del loop */
 .gallery-set img {
- width: 100%;            /* ocupa todo el contenedor del set */
-  max-width: 360px;       /* límite máximo para que no se haga gigante */
-  height: 240px;   
+  width: 100%;
+  max-width: 300px;  /* límite máximo */
+  height: auto;      /* mantiene proporción */
   object-fit: cover;
-  flex-shrink: 0;
   border-radius: 8px;
+  flex-shrink: 0;
 
   position: relative;
   z-index: 1;
@@ -71,6 +75,7 @@ header {
     box-shadow 0.35s ease,
     filter 0.35s ease;
 }
+
 
 /* Hover imagen activa: levanta + glow */
 .gallery-set img:hover {
