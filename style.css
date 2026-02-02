@@ -50,7 +50,7 @@ header {
   width: max-content;
   will-change: transform;
   align-items: center;
-  animation: scroll 90s linear infinite;
+  animation: scroll 70s linear infinite;
   padding: 20px 0;
 }
 
