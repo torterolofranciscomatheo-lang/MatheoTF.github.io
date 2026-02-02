@@ -16,7 +16,7 @@
   <header>
     <h1>Matheo TF</h1>
     <p>Concept Art · Characters · Environments · Creature Design</p>
-    <p>Instagram: https://www.instagram.com/matheo_tf/  ·  Artstation: https://matheotf.artstation.com</p>
+    <p>Instagram: https://www.instagram.com/matheo_tf/ · Artstation: https://matheotf.artstation.com</p>
   </header>
 
   <!-- ==============================
@@ -24,7 +24,6 @@
        ============================== -->
   <section class="gallery">
     <div class="gallery-track">
-      <!-- Primer set -->
       <div class="gallery-set">
         <img src="images/obra1.jpg" alt="Obra 1">
         <img src="images/obra2.jpg" alt="Obra 2">
@@ -32,8 +31,6 @@
         <img src="images/obra4.jpg" alt="Obra 4">
         <img src="images/obra5.jpg" alt="Obra 5">
       </div>
-
-      <!-- Duplicado para loop infinito -->
       <div class="gallery-set">
         <img src="images/obra1.jpg" alt="">
         <img src="images/obra2.jpg" alt="">
@@ -52,7 +49,6 @@
     <p class="section-desc">
       Diseño de personajes para videojuegos. Enfoque en silueta, materiales y lectura clara en gameplay.
     </p>
-
     <div class="project">
       <img src="images/splash_art_01.jpg" alt="Personaje">
       <div class="info">
@@ -63,15 +59,13 @@
   </section>
 
   <!-- ==============================
-       PROCESO / SKETCHES CON LIGHTBOX
+       PROCESO / SKETCHES
        ============================== -->
   <section class="portfolio-section">
     <h2>Proceso – Personaje BAATAR</h2>
     <p class="section-desc">
       Exploración visual del personaje desde sketches iniciales hasta turnaround y detalles finales.
     </p>
-
-    <!-- Grid de imágenes -->
     <div class="project-grid">
       <div class="project-small">
         <p>Sketch 1 – Pruebas de vestimenta</p>
@@ -92,15 +86,14 @@
     </div>
   </section>
 
-  <!-- Lightbox / modal -->
+  <!-- ==============================
+       LIGHTBOX / MODAL
+       ============================== -->
   <div id="lightbox" class="lightbox">
     <span class="close">&times;</span>
     <img class="lightbox-img" src="">
   </div>
 
-  <!-- ==============================
-       SCRIPT LIGHTBOX
-       ============================== -->
   <script>
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.querySelector('.lightbox-img');
@@ -118,73 +111,42 @@
       lightbox.style.display = 'none';
     });
 
-    lightbox.add
-<!-- Lightbox / modal -->
-<div id="lightbox" class="lightbox">
-  <span class="close">&times;</span>
-  <img class="lightbox-img" src="">
-</div>
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) lightbox.style.display = 'none';
+    });
+  </script>
 
-<script>
-// Obtener elementos
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.querySelector('.lightbox-img');
-const images = document.querySelectorAll('.clickable');
-const closeBtn = document.querySelector('.lightbox .close');
-
-// Abrir lightbox al clickear la imagen
-images.forEach(img => {
-  img.addEventListener('click', () => {
-    lightbox.style.display = 'flex';
-    lightboxImg.src = img.src;
-  });
-});
-
-// Cerrar lightbox con la X
-closeBtn.addEventListener('click', () => {
-  lightbox.style.display = 'none';
-});
-
-// Cerrar al clickear fuera de la imagen
-lightbox.addEventListener('click', (e) => {
-  if (e.target === lightbox) lightbox.style.display = 'none';
-});
-</script>
-
-
-<!-- ==============================
-     PORTFOLIO / GAME DESIGN
-     ============================== -->
-<section class="portfolio-masks">
-  <h2>Game Design</h2>
-  <p class="section-desc">
-    Diseños para Global Game Jam – Face the Mask
-  </p>
-
-  <div class="project">
-    <img src="images/mask_art_01.jpg" alt="MASK">
-    <div class="info">
-      <h3>Face the Mask</h3>
-      <p>Diseños para Global Game Jam, Face the Mask</p>
+  <!-- ==============================
+       GAME DESIGN – FACE THE MASK
+       ============================== -->
+  <section class="portfolio-masks">
+    <h2>Game Design</h2>
+    <p class="section-desc">Diseños para Global Game Jam – Face the Mask</p>
+    <div class="project">
+      <img src="images/mask_art_01.jpg" alt="MASK" class="clickable">
+      <div class="info">
+        <h3>Face the Mask</h3>
+        <p>Diseños para Global Game Jam, Face the Mask</p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- ==============================
+       IMÁGENES LATERALES – SPRITES
+       ============================== -->
+  <section class="portfolio-section">
+    <h2>Sprites</h2>
+    <p class="section-desc">Diseños de Mascaras Madre</p>
+    <div class="side-images">
+      <div class="side-img">
+        <img src="images/mask_art_02.jpg" alt="mask_art_02" class="clickable">
+      </div>
+      <div class="side-img">
+        <img src="images/mask_art_03.jpg" alt="mask_art_03" class="clickable">
+      </div>
+    </div>
+  </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
   <!-- ==============================
        FOOTER
        ============================== -->
