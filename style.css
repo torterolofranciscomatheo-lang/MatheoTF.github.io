@@ -31,6 +31,8 @@ header {
   overflow-x: hidden;
   overflow-y: visible;
 
+  display: block; /* ← IMPORTANTE */
+
   mask-image: linear-gradient(
     to right,
     transparent,
@@ -39,6 +41,7 @@ header {
     transparent
   );
 }
+
 
 /* Contenedor animado */
 .gallery-track {
