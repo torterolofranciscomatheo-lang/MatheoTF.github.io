@@ -220,3 +220,40 @@ h1, h2 {
     grid-template-columns: 1fr;
   }
 }
+/* ==============================
+   SECCIÓN IMÁGENES LATERALES
+   ============================== */
+.side-images {
+  display: flex;
+  gap: 20px;           /* espacio entre las imágenes */
+  justify-content: center;
+  flex-wrap: wrap;      /* permite que baje a una columna si la pantalla es pequeña */
+  margin-bottom: 60px;
+}
+
+.side-img {
+  flex: 1 1 45%;        /* cada imagen ocupa casi la mitad del ancho */
+  max-width: 500px;     /* límite para no exagerar el tamaño */
+}
+
+.side-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  cursor: pointer;      /* para que pueda abrirse en lightbox si tiene la clase clickable */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover opcional para levantar imagen */
+.side-img img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+/* Responsive: en pantallas pequeñas pasa a columna */
+@media (max-width: 900px) {
+  .side-images {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
