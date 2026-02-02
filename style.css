@@ -140,14 +140,14 @@ header {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 columnas */
   gap: 20px; /* espacio entre imágenes */
-  max-width: 700px; /* ancho total del rectángulo, controla tamaño */
+  max-width: 800px; /* ancho total del rectángulo, controla tamaño */
   margin: 0 auto 60px auto; /* centrado horizontal */
 }
 
 .project-small img {
   width: 100%;       /* ocupa todo el contenedor de cada celda */
   height: auto;
-  max-height: 800px; /* límite de altura para que no queden gigantes */
+  max-height: 900px; /* límite de altura para que no queden gigantes */
   border-radius: 6px;
 }
 
