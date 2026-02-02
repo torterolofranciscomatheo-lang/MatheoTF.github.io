@@ -25,7 +25,6 @@ header {
   overflow-x: hidden;
   overflow-y: visible;
   display: block;
-
   mask-image: linear-gradient(
     to right,
     transparent,
@@ -57,13 +56,11 @@ header {
   object-fit: cover;
   flex-shrink: 0;
   border-radius: 8px;
-
   position: relative;
   z-index: 1;
   transition: transform 0.35s ease, box-shadow 0.35s ease, filter 0.35s ease;
 }
 
-/* Hover – levanta + glow */
 .gallery-set img:hover {
   transform: scale(1.06) translateY(-6px);
   z-index: 5;
@@ -77,19 +74,13 @@ header {
   filter: brightness(0.75);
 }
 
-/* Pausa animación al hover */
 .gallery:hover .gallery-track {
   animation-play-state: paused;
 }
 
-/* Animación horizontal */
 @keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(calc(-50% - 12px));
-  }
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-50% - 12px)); }
 }
 
 /* ==============================
@@ -143,7 +134,6 @@ header {
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-/* Hover: levanta + glow */
 .project-small img:hover {
   transform: scale(1.05) translateY(-6px);
   box-shadow:
@@ -204,56 +194,97 @@ h1, h2 {
 }
 
 /* ==============================
-   RESPONSIVE
-   ============================== */
-@media (max-width: 900px) {
-  .project {
-    flex-direction: column;
-  }
-  .info {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 600px) {
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-}
-/* ==============================
    SECCIÓN IMÁGENES LATERALES
    ============================== */
 .side-images {
   display: flex;
-  gap: 20px;           /* espacio entre las imágenes */
+  gap: 20px;
   justify-content: center;
-  flex-wrap: wrap;      /* permite que baje a una columna si la pantalla es pequeña */
+  flex-wrap: wrap;
   margin-bottom: 60px;
 }
 
 .side-img {
-  flex: 1 1 45%;        /* cada imagen ocupa casi la mitad del ancho */
-  max-width: 500px;     /* límite para no exagerar el tamaño */
+  flex: 1 1 45%;
+  max-width: 500px;
 }
 
 .side-img img {
   width: 100%;
   height: auto;
   border-radius: 6px;
-  cursor: pointer;      /* para que pueda abrirse en lightbox si tiene la clase clickable */
+  cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover opcional para levantar imagen */
 .side-img img:hover {
   transform: scale(1.05);
   box-shadow: 0 20px 40px rgba(0,0,0,0.5);
 }
 
-/* Responsive: en pantallas pequeñas pasa a columna */
 @media (max-width: 900px) {
-  .side-images {
-    flex-direction: column;
-    gap: 20px;
-  }
+  .side-images { flex-direction: column; gap: 20px; }
+}
+
+/* ==============================
+   SECCIÓN GAME DESIGN – FACE THE MASK
+   ============================== */
+.portfolio-masks {
+  padding: 100px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  border-top: 2px solid rgba(255,255,255,0.1);
+}
+
+.portfolio-masks h2 {
+  margin-bottom: 20px;
+}
+
+.portfolio-masks .section-desc {
+  opacity: 0.7;
+  margin-bottom: 60px;
+}
+
+.portfolio-masks .project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 80px;
+}
+
+.portfolio-masks .project img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.portfolio-masks .project img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  z-index: 5;
+}
+
+.portfolio-masks .project .info h3 {
+  margin: 10px 0 5px 0;
+}
+
+.portfolio-masks .project .info p {
+  opacity: 0.8;
+}
+
+/* ==============================
+   RESPONSIVE
+   ============================== */
+@media (max-width: 900px) {
+  .project { flex-direction: column; }
+  .info { max-width: 100%; }
+}
+
+@media (max-width: 600px) {
+  .project-grid { grid-template-columns: 1fr; }
 }
