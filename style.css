@@ -25,6 +25,16 @@ header {
    ============================== */
 
 .gallery {
+   
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+}
+
   width: 100%;
   overflow: hidden;
   margin: 32px 0;
@@ -37,7 +47,7 @@ header {
   width: max-content;
   will-change: transform;
   align-items: center;
-  animation: scroll 70s linear infinite;
+  animation: scroll 90s linear infinite;
 }
 
 /* Cada bloque duplicado */
