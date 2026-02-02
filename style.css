@@ -140,21 +140,15 @@ header {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 columnas */
   gap: 20px; /* espacio entre imágenes */
-  max-width: 900px; /* ancho total del rectángulo */
-  margin: 0 auto 60px auto; /* centrado horizontal y margen abajo */
+  max-width: 520px; /* ancho total del rectángulo, controla tamaño */
+  margin: 0 auto 60px auto; /* centrado horizontal */
 }
 
 .project-small img {
-  width: 100%;
+  width: 100%;       /* ocupa todo el contenedor de cada celda */
   height: auto;
+  max-height: 240px; /* límite de altura para que no queden gigantes */
   border-radius: 6px;
-}
-
-.project-small p {
-  font-size: 14px;
-  text-align: center;
-  margin-bottom: 8px; /* separa subtítulo de la imagen */
-  opacity: 0.7;
 }
 
 /* ==============================
