@@ -96,4 +96,36 @@ footer {
     transform: translateX(-50%);
   }
 }
+/* ===== GALERÍA SUPERIOR LOOP ===== */
+
+.gallery {
+  width: 100%;
+  overflow: hidden;
+  margin: 40px 0;
+}
+
+.gallery-track {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+}
+
+.gallery-track img {
+  height: 220px;        /* controla el tamaño */
+  width: auto;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 6px;
+}
+
+/* animación horizontal */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
 
