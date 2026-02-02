@@ -23,10 +23,9 @@ header {
   width: 100%;
   margin: 32px 0;
 
-  overflow-x: hidden;    /* oculta scroll horizontal sobrante */
-  overflow-y: visible;   /* permite hover vertical */
-
-  display: block;        /* evita grid o flex que genere filas */
+  overflow-x: hidden;
+  overflow-y: visible;
+  display: block;
 
   mask-image: linear-gradient(
     to right,
@@ -44,28 +43,24 @@ header {
   align-items: center;
   will-change: transform;
   animation: scroll 70s linear infinite;
-
-  /* nuevo: limitar ancho total para que no crezca demasiado */
-  max-width: 100%;
+  padding: 20px 0;
 }
 
+/* Cada bloque duplicado */
 .gallery-set {
   display: flex;
   gap: 24px;
-
-  /* nuevo: limitar ancho total del set */
   flex: 0 0 auto;
 }
-
 
 /* Imágenes del loop */
 .gallery-set img {
   width: 100%;
-  max-width: 300px;  /* límite máximo */
-  height: auto;      /* mantiene proporción */
+  max-width: 320px; /* tamaño controlado */
+  height: auto;
   object-fit: cover;
-  border-radius: 8px;
   flex-shrink: 0;
+  border-radius: 8px;
 
   position: relative;
   z-index: 1;
@@ -76,8 +71,7 @@ header {
     filter 0.35s ease;
 }
 
-
-/* Hover imagen activa: levanta + glow */
+/* Hover: levanta + glow */
 .gallery-set img:hover {
   transform: scale(1.06) translateY(-6px);
   z-index: 5;
@@ -104,7 +98,7 @@ header {
     transform: translateX(0);
   }
   to {
-    transform: translateX(calc(-50% - 12px)); /* compensación del gap */
+    transform: translateX(calc(-50% - 12px));
   }
 }
 
@@ -161,4 +155,3 @@ footer {
     max-width: 100%;
   }
 }
-
