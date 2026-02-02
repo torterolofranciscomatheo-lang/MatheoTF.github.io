@@ -25,7 +25,12 @@ header {
    ============================== */
 
 .gallery {
-   
+  width: 100%;
+  margin: 32px 0;
+
+  overflow-x: hidden;
+  overflow-y: visible;
+
   mask-image: linear-gradient(
     to right,
     transparent,
@@ -33,11 +38,6 @@ header {
     black 92%,
     transparent
   );
-}
-
-  width: 100%;
-  overflow: hidden;
-  margin: 32px 0;
 }
 
 /* Contenedor animado */
@@ -48,6 +48,7 @@ header {
   will-change: transform;
   align-items: center;
   animation: scroll 90s linear infinite;
+  padding: 20px 0;
 }
 
 /* Cada bloque duplicado */
