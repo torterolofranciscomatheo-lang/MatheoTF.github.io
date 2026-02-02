@@ -1,52 +1,69 @@
-<!-- GALERÍA SUPERIOR -->
-<section class="gallery">
-  <div class="gallery-track">
-    <!-- Primer set de imágenes -->
-    <div class="gallery-set">
-      <img src="images/obra1.jpg" alt="Obra 1">
-      <img src="images/obra2.jpg" alt="Obra 2">
-      <img src="images/obra3.jpg" alt="Obra 3">
-      <img src="images/obra4.jpg" alt="Obra 4">
-      <img src="images/obra5.jpg" alt="Obra 5">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Matheo TF – Concept Art</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==============================
+       HEADER
+       ============================== -->
+  <header>
+    <h1>Matheo TF</h1>
+    <p>Concept Art · Characters · Environments · Creature Design</p>
+  </header>
+
+  <!-- ==============================
+       GALERÍA SUPERIOR – LOOP INFINITO
+       ============================== -->
+  <section class="gallery">
+    <div class="gallery-track">
+      <!-- Primer set -->
+      <div class="gallery-set">
+        <img src="images/obra1.jpg" alt="Obra 1">
+        <img src="images/obra2.jpg" alt="Obra 2">
+        <img src="images/obra3.jpg" alt="Obra 3">
+        <img src="images/obra4.jpg" alt="Obra 4">
+        <img src="images/obra5.jpg" alt="Obra 5">
+      </div>
+
+      <!-- Duplicado para loop infinito -->
+      <div class="gallery-set">
+        <img src="images/obra1.jpg" alt="">
+        <img src="images/obra2.jpg" alt="">
+        <img src="images/obra3.jpg" alt="">
+        <img src="images/obra4.jpg" alt="">
+        <img src="images/obra5.jpg" alt="">
+      </div>
     </div>
+  </section>
 
-    <!-- Duplicado para loop infinito -->
-    <div class="gallery-set">
-      <img src="images/obra1.jpg" alt="">
-      <img src="images/obra2.jpg" alt="">
-      <img src="images/obra3.jpg" alt="">
-      <img src="images/obra4.jpg" alt="">
-      <img src="images/obra5.jpg" alt="">
+  <!-- ==============================
+       PORTFOLIO / PROYECTOS
+       ============================== -->
+  <section class="portfolio-section">
+    <h2>Characters</h2>
+    <p class="section-desc">
+      Diseño de personajes para videojuegos. Enfoque en silueta, materiales y lectura clara en gameplay.
+    </p>
+
+    <div class="project">
+      <img src="images/personaje_01.png" alt="Personaje">
+      <div class="info">
+        <h3>BAATAR – Diseño de tanque</h3>
+        <p>Concept art de personaje tanque con armadura pesada y desgaste.</p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-
-<!-- SECCIÓN PORTFOLIO -->
-<section class="portfolio-section">
-
-  <h2>Characters</h2>
-  <p class="section-desc">
-    Diseño de personajes para videojuegos. Enfoque en silueta, materiales y lectura clara en gameplay.
-  </p>
-
-  <div class="project">
-    <img src="images/personaje_01.png" alt="BAATAR personaje tanque">
-
-    <div class="info">
-      <h3>BAATAR — Tanque para juego estilo League of Legends</h3>
-      <p>Concept art de personaje tanque.</p>
-      <p>Exploración de armadura pesada, desgaste y contraste de materiales.</p>
-    </div>
-  </div>
-
-</section>
-
-<footer>
-  <p>© 2026 – Portfolio</p>
-</footer>
+  <!-- ==============================
+       FOOTER
+       ============================== -->
+  <footer>
+    <p>© 2026 – Portfolio</p>
+  </footer>
 
 </body>
 </html>
-
