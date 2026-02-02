@@ -151,6 +151,29 @@ header {
   border-radius: 6px;
 }
 
+/* Hover imágenes del grid */
+.project-small img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  border-radius: 6px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Efecto hover */
+.project-small img:hover {
+  transform: scale(1.08) translateY(-5px); /* agranda y levanta */
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.5),
+    0 0 20px rgba(255,255,255,0.15);
+  z-index: 5; /* para que se vea encima de otras imágenes si se superpone */
+}
+.project-grid:hover .project-small img:not(:hover) {
+  filter: brightness(0.75);
+}
+
+
+
 /* ==============================
    FOOTER
    ============================== */
