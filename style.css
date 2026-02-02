@@ -57,15 +57,37 @@ header {
 }
 
 /* Imágenes del loop */
+
 .gallery-set img {
   width: 440px;
   height: 300px;
   object-fit: cover;
-  padding: 6px;
-  background: #0e0e0e;
-  box-sizing: border-box;
   flex-shrink: 0;
-  border-radius: 6px;
+  border-radius: 8px;
+
+  position: relative;
+  z-index: 1;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    filter 0.35s ease;
+}
+/* Hover imagen activa */
+.gallery-set img:hover {
+  transform: scale(1.06) translateY(-6px);
+  z-index: 5;
+
+  box-shadow:
+    0 0 0 2px rgba(255,255,255,0.15),
+    0 20px 40px rgba(0,0,0,0.5),
+    0 0 30px rgba(255,255,255,0.25);
+}
+.gallery-set:hover img:not(:hover) {
+  filter: brightness(0.75);
+}
+
+
 }
 
 /* Animación horizontal */
