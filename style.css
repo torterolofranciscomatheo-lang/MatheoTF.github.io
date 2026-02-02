@@ -56,8 +56,9 @@ header {
 
 /* Imágenes del loop */
 .gallery-set img {
-  width: 440px;
-  height: 300px;
+ width: 100%;            /* ocupa todo el contenedor del set */
+  max-width: 360px;       /* límite máximo para que no se haga gigante */
+  height: 240px;   
   object-fit: cover;
   flex-shrink: 0;
   border-radius: 8px;
