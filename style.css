@@ -33,3 +33,29 @@ footer {
   font-size: 14px;
   opacity: 0.6;
 }
+.portfolio-section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section-desc {
+  opacity: 0.7;
+  margin-bottom: 40px;
+}
+
+.project {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.project img {
+  width: 60%;
+  border-radius: 6px;
+}
+
+.info {
+  width: 40%;
+}
