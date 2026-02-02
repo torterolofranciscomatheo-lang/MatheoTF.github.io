@@ -43,7 +43,7 @@ header {
 /* Cada bloque duplicado */
 .gallery-set {
   display: flex;
-  gap: 24px;
+  
 }
 
 /* Imágenes del loop */
@@ -64,7 +64,7 @@ header {
     transform: translateX(0);
   }
   to {
-    transform: translateX(-50%);
+    transform: translateX(calc(-50% - 12px));
   }
 }
 
