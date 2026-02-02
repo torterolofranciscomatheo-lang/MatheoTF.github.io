@@ -71,4 +71,29 @@ footer {
     max-width: 100%;
   }
 }
+.gallery {
+  overflow: hidden;
+  width: 100%;
+}
+
+.gallery-track {
+  display: flex;
+  gap: 24px;
+  animation: scroll 20s linear infinite;
+}
+
+.gallery-track img {
+  width: 300px;
+  flex-shrink: 0;
+}
+
+/* Animación */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
 
