@@ -3,7 +3,7 @@
    ============================== */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', Arial, sans-serif;
   background: #0e0e0e;
   color: #eee;
 }
@@ -22,7 +22,6 @@ header {
 .gallery {
   width: 100%;
   margin: 32px 0;
-
   overflow-x: hidden;
   overflow-y: visible;
   display: block;
@@ -36,7 +35,6 @@ header {
   );
 }
 
-/* Contenedor animado */
 .gallery-track {
   display: flex;
   gap: 24px;
@@ -46,17 +44,15 @@ header {
   padding: 20px 0;
 }
 
-/* Cada bloque duplicado */
 .gallery-set {
   display: flex;
   gap: 24px;
   flex: 0 0 auto;
 }
 
-/* Imágenes del loop */
 .gallery-set img {
   width: 100%;
-  max-width: 320px; /* tamaño controlado */
+  max-width: 320px;
   height: auto;
   object-fit: cover;
   flex-shrink: 0;
@@ -64,25 +60,19 @@ header {
 
   position: relative;
   z-index: 1;
-
-  transition:
-    transform 0.35s ease,
-    box-shadow 0.35s ease,
-    filter 0.35s ease;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, filter 0.35s ease;
 }
 
-/* Hover: levanta + glow */
+/* Hover – levanta + glow */
 .gallery-set img:hover {
   transform: scale(1.06) translateY(-6px);
   z-index: 5;
-
   box-shadow:
     0 0 0 2px rgba(255,255,255,0.15),
     0 20px 40px rgba(0,0,0,0.5),
     0 0 30px rgba(255,255,255,0.25);
 }
 
-/* Oscurece las demás mientras hay hover */
 .gallery-set:hover img:not(:hover) {
   filter: brightness(0.75);
 }
@@ -134,13 +124,13 @@ header {
 }
 
 /* ==============================
-   GRID DE SKETCHES
+   GRID DE SKETCHES / LIGHTBOX
    ============================== */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  grid-template-columns: repeat(2, 1fr);
   gap: 25px;
-  max-width: 900px;  /* ancho total del rectángulo */
+  max-width: 900px;
   margin: 0 auto 60px auto;
 }
 
@@ -149,14 +139,27 @@ header {
   height: auto;
   max-height: 400px;
   border-radius: 6px;
-  cursor: pointer; /* indica que se puede clickear */
+  cursor: pointer;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-/* ==============================
-   LIGHTBOX
-   ============================== */
+/* Hover: levanta + glow */
+.project-small img:hover {
+  transform: scale(1.05) translateY(-6px);
+  box-shadow:
+    0 0 0 2px rgba(255,255,255,0.15),
+    0 20px 40px rgba(0,0,0,0.5),
+    0 0 30px rgba(255,255,255,0.25);
+  z-index: 5;
+}
+
+.project-grid:hover .project-small img:not(:hover) {
+  filter: brightness(0.8);
+}
+
+/* Lightbox / modal */
 .lightbox {
-  display: none; /* oculto por defecto */
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -166,7 +169,6 @@ header {
   justify-content: center;
   align-items: center;
   z-index: 999;
-  display: flex;
 }
 
 .lightbox-img {
@@ -187,39 +189,34 @@ header {
 }
 
 /* ==============================
+   FUENTES
+   ============================== */
+h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+.project-small p,
+.section-desc {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+/* ==============================
    RESPONSIVE
    ============================== */
 @media (max-width: 900px) {
   .project {
     flex-direction: column;
   }
-
   .info {
     max-width: 100%;
   }
 }
-/* ==============================
-   FUENTES PORTFOLIO
-   ============================== */
 
-/* Cuerpo general */
-body {
-  margin: 0;
-  font-family: 'Inter', Arial, sans-serif;
-  background: #0e0e0e;
-  color: #eee;
-}
-
-/* Títulos y secciones */
-h1, h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-}
-
-/* Subtítulos de las imágenes / procesos */
-.project-small p,
-.section-desc {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  opacity: 0.7;
+@media (max-width: 600px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
 }
