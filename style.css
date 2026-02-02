@@ -1,7 +1,6 @@
 /* ==============================
    RESET / BASE
    ============================== */
-
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -9,29 +8,25 @@ body {
   color: #eee;
 }
 
-
 /* ==============================
    HEADER
    ============================== */
-
 header {
   text-align: center;
   padding: 40px 20px;
 }
 
-
 /* ==============================
    GALERÍA SUPERIOR – LOOP INFINITO
    ============================== */
-
 .gallery {
   width: 100%;
   margin: 32px 0;
 
-  overflow-x: hidden;
-  overflow-y: visible;
+  overflow-x: hidden;    /* oculta scroll horizontal sobrante */
+  overflow-y: visible;   /* permite hover vertical */
 
-  display: block; /* ← IMPORTANTE */
+  display: block;        /* evita grid o flex que genere filas */
 
   mask-image: linear-gradient(
     to right,
@@ -42,26 +37,24 @@ header {
   );
 }
 
-
 /* Contenedor animado */
 .gallery-track {
   display: flex;
-  gap: 24px; 
+  gap: 24px;
   width: max-content;
-  will-change: transform;
   align-items: center;
-  animation: scroll 10s linear infinite;
-  padding: 20px 0;
+  will-change: transform;
+  animation: scroll 70s linear infinite;
+  padding: 20px 0;       /* espacio para hover vertical */
 }
 
 /* Cada bloque duplicado */
 .gallery-set {
   display: flex;
-  
+  gap: 24px;             /* espacio entre imágenes dentro de cada set */
 }
 
 /* Imágenes del loop */
-
 .gallery-set img {
   width: 440px;
   height: 300px;
@@ -77,7 +70,8 @@ header {
     box-shadow 0.35s ease,
     filter 0.35s ease;
 }
-/* Hover imagen activa */
+
+/* Hover imagen activa: levanta + glow */
 .gallery-set img:hover {
   transform: scale(1.06) translateY(-6px);
   z-index: 5;
@@ -87,11 +81,15 @@ header {
     0 20px 40px rgba(0,0,0,0.5),
     0 0 30px rgba(255,255,255,0.25);
 }
+
+/* Oscurece las demás mientras hay hover */
 .gallery-set:hover img:not(:hover) {
   filter: brightness(0.75);
 }
 
-
+/* Pausa animación al hover */
+.gallery:hover .gallery-track {
+  animation-play-state: paused;
 }
 
 /* Animación horizontal */
@@ -100,20 +98,13 @@ header {
     transform: translateX(0);
   }
   to {
-    transform: translateX(calc(-50% - 12px));
+    transform: translateX(calc(-50% - 12px)); /* compensación del gap */
   }
 }
-
-/* Pausa al hover (opcional, queda lindo) */
-.gallery:hover .gallery-track {
-  animation-play-state: paused;
-}
-
 
 /* ==============================
    PORTFOLIO / PROYECTOS
    ============================== */
-
 .portfolio-section {
   padding: 60px 20px;
   max-width: 1100px;
@@ -142,11 +133,9 @@ header {
   max-width: 350px;
 }
 
-
 /* ==============================
    FOOTER
    ============================== */
-
 footer {
   text-align: center;
   padding: 20px;
@@ -154,11 +143,9 @@ footer {
   opacity: 0.6;
 }
 
-
 /* ==============================
    RESPONSIVE
    ============================== */
-
 @media (max-width: 900px) {
   .project {
     flex-direction: column;
