@@ -128,4 +128,37 @@ footer {
     transform: translateX(-50%);
   }
 }
+/* ===== FIX DEFINITIVO GALERÍA SUPERIOR ===== */
+
+.gallery {
+  width: 100%;
+  overflow: hidden;
+  margin: 24px 0;
+}
+
+.gallery-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+}
+
+/* ACA forzamos tamaño chico, pase lo que pase */
+.gallery-track img {
+  width: 260px !important;
+  height: 160px !important;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 6px;
+}
+
+/* Animación */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
 
