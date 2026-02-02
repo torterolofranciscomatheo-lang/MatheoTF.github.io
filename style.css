@@ -134,6 +134,36 @@ header {
 }
 
 /* ==============================
+   PROCESO – IMÁGENES PEQUEÑAS
+   ============================== */
+.project-group {
+  display: flex;          /* fila de imágenes */
+  gap: 20px;              /* espacio entre ellas */
+  flex-wrap: wrap;        /* si no caben, saltan a la siguiente línea */
+  justify-content: center; /* centrado horizontal */
+  margin-bottom: 60px;
+}
+
+.project-small {
+  max-width: 240px;       /* tamaño máximo de cada imagen */
+  flex: 1 1 auto;         /* se ajusta al espacio disponible */
+}
+
+.project-small img {
+  width: 100%;            /* ocupa todo el contenedor */
+  height: auto;
+  border-radius: 6px;
+}
+
+.project-small p {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 6px;
+  opacity: 0.7;
+}
+
+
+/* ==============================
    FOOTER
    ============================== */
 footer {
