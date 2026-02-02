@@ -134,23 +134,18 @@ header {
 }
 
 /* ==============================
-   PROCESO – IMÁGENES PEQUEÑAS
+   PROCESO – GRID 2x2
    ============================== */
-.project-group {
-  display: flex;          /* fila de imágenes */
-  gap: 20px;              /* espacio entre ellas */
-  flex-wrap: wrap;        /* si no caben, saltan a la siguiente línea */
-  justify-content: center; /* centrado horizontal */
-  margin-bottom: 60px;
-}
-
-.project-small {
-  max-width: 240px;       /* tamaño máximo de cada imagen */
-  flex: 1 1 auto;         /* se ajusta al espacio disponible */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  gap: 20px; /* espacio entre imágenes */
+  max-width: 520px; /* ancho total del rectángulo */
+  margin: 0 auto 60px auto; /* centrado y margen abajo */
 }
 
 .project-small img {
-  width: 100%;            /* ocupa todo el contenedor */
+  width: 100%;
   height: auto;
   border-radius: 6px;
 }
